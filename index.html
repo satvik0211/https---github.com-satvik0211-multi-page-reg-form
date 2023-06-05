@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>Registration Form</header>
+      <form action="index.php" method="POST" enctype="multipart/form-data">
+        <div class="formfirst">
+          <div class="fields">
+            <label for="Name">Name<span>*</span></label>
+            <div class="input">
+              <input
+                type="text"
+                name="firstName"
+                id="first"
+                placeholder="First Name"
+              />
+              <input
+                type="text"
+                name="lastName"
+                id="last"
+                placeholder="Last Name"
+              />
+            </div>
+          </div>
+          <div class="fields">
+            <label for="dob">Date of Birth<span>*</span></label>
+            <div class="input">
+              <input type="date" name="dob" id="dob" required/>
+            </div>
+            <label for="email">Email<span>*</span></label>
+            <div class="input">
+              <input type="email" name="email" id="email" />
+            </div>
+          </div>
+          <div class="fields">
+            <label for="fName">Father's Name<span>*</span></label>
+            <div class="input">
+              <input
+                type="text"
+                name="fathersfirstName"
+                id="ffirst"
+                placeholder="First Name"
+                required
+              />
+              <input
+                type="text"
+                name="fatherslastName"
+                id="flast"
+                placeholder="Last Name"
+                required
+              />
+            </div>
+          </div>
+          <div class="fields">
+            <label for="mName">Mother's Name<span>*</span></label>
+            <div class="input">
+              <input
+                type="text"
+                name="mothersfirstName"
+                id="mfirst"
+                placeholder="First Name"
+                required
+              />
+              <input
+                type="text"
+                name="motherslastName"
+                id="mlast"
+                placeholder="Last Name"
+                required
+              />
+            </div>
+          </div>
+          <div class="fields">
+            <label for="gender">Gender<span>*</span></label>
+            <div class="input1">
+              <input type="radio" name="gender" id="male" checked="checked" value="m"/>
+              <label for="male">Male</label>
+              <input type="radio" name="gender" id="female" value="f"/>
+              <label for="female">Female</label>
+            </div>
+          </div>
+          <div class="fields">
+            <label for="nation">Nationality<span>*</span></label>
+            <div class="input">
+              <input type="text" name="nationality" id="nationality" required/>
+            </div>
+          </div>
+          <div class="fields">
+            <label for="address">Home Address<span>*</span></label>
+            <div class="input">
+              <input
+                type="text"
+                name="address"
+                id="address"
+                placeholder="Street Address"
+                required
+              />
+            </div>
+          </div>
+          <div class="field1">
+            <div class="input2">
+              <label for="district">District<span>*</span></label>
+              <input type="text" name="district" id="dist" required/>
+            </div>
+            <div class="input3">
+              <label for="country">Country<span>*</span></label>
+              <select name="country" id="country" required>
+                <option value="" disable selected hidden>Country</option>
+                <option value="india">India</option>
+                <option value="australia">Australia</option>
+                <option value="usa">USA</option>
+                <option value="uk">United Kingdom</option>
+              </select>
+            </div>
+          </div>
+          <div class="field1">
+            <div class="input2">
+              <label for="Telephonehome">Telephone-Home</label>
+              <input
+                type="tel"
+                name="homemob"
+                id="hmob"
+                placeholder="##########"
+                pattern="[0-9]{10}"
+              />
+            </div>
+            <div class="input3">
+              <label for="telephonepers">Telephone-Mobile<span>*</span></label>
+              <input
+                type="tel"
+                name="personalmob"
+                id="mobno"
+                placeholder="##########"
+                pattern="[0-9]{10}"
+                required
+              />
+            </div>
+          </div>
+          <button class="firstbtn">Next</button>
+        </div>
+        <div class="formsecond">
+          <div class="sfield">
+            <div class="iname">
+              <label for="insname">HSC instituition Name<span>*</span></label>
+              <div class="inamee">
+                <input type="text" name="HSCinsname" id="iname" required/>
+              </div>
+            </div>
+            <div class="idetails">
+              <div class="hboard">
+                <label for="boardnamme">HSC Board<span>*</span></label>
+                <select name="HSCboard" id="hboard" required>
+                  <option value="" disable selected hidden>Board</option>
+                  <option value="icse">ICSE</option>
+                  <option value="cbse">CBSE</option>
+                  <option value="state_board">State Board</option>
+                </select>
+              </div>
+              <div class="hperc">
+                <label for="perc">HSC Percentage<span>*</span></label>
+                <input type="number" name="HSCPercentage" id="percentage" required/>
+              </div>
+            </div>
+          </div>
+          <div class="sfield">
+            <div class="iname">
+              <label for="insname">SSC instituition Name<span>*</span></label>
+              <div class="inamee">
+                <input type="text" name="SSCinsname" id="isname" required/>
+              </div>
+            </div>
+            <div class="idetails">
+              <div class="hboard">
+                <label for="sboardnamme">HSC Board<span>*</span></label>
+                <select name="SSCboard" id="sboard" required>
+                  <option value="" disable selected hidden>Board</option>
+                  <option value="icse">ICSE</option>
+                  <option value="cbse">CBSE</option>
+                  <option value="state_board">State Board</option>
+                </select>
+              </div>
+              <div class="hperc">
+                <label for="perc">HSC Percentage<span>*</span></label>
+                <input type="number" name="SSCPercentage" id="spercentage" required/>
+              </div>
+            </div>
+          </div>
+          <div class="curfield">
+            <div class="ciname">
+              <label for="currinsname">Current instituition Name<span>*</span></label>
+              <div class="cinamenput">
+                <input type="text" name="currinsname" id="cinamee" required/>
+              </div>
+            </div>
+            <div class="cidetail">
+              <div class="cpur">
+                <label for="currpusrding">Currently pursuing<span>*</span></label>
+                <input type="text" name="currentpursing" id="cpurs" required/>
+              </div>
+              <div class="curperc">
+                <label for="curr_perc">Overall Percentage<span>*</span></label>
+                <input type="number" name="Overallpercentage" id="cperc" required/>
+              </div>
+              <div class="curback">
+                <label for="Curr_back">Current Backlog (if Any)<span>*</span></label>
+                <input type="number" name="currentback" id="cback" required/>
+              </div>
+            </div>
+          </div>
+          <div class="btn1">
+            <button class="prev">Previous</button>
+            <button class="next1">Next</button>
+          </div>
+        </div>
+        <div class="formthird">
+          <div class="upload">
+            <div class="photo">
+              <label for="photo">Recent passport size photograph (image size less than 4MB)<span>*</span></label>
+              <input type="file" name="photo" id="photoown">
+            </div>
+            <div class="hmark">
+              <label for="hmarksheet">HSC mark sheet (image, PDF or docs size less than 4MB)<span>*</span></label>
+              <input type="file" name="HSCmark" id="hmarksheet">
+            </div>
+            <div class="smark">
+              <label for="smark">SSC mark sheet (image, PDF or docs size less than 4MB)<span>*</span></label>
+              <input type="file" name="SSCmark" id="smarksheet">
+            </div>
+            <div class="sem">
+              <label for="semamrk">All semesters mark sheet in a single PDF or docs (file size less than 10MB)<span>*</span></label>
+              <input type="file" name="semm" id="semmark">
+            </div>
+          </div>
+          <div id="error-message" class="error-message"></div>
+          <div class="btn2">
+            <button class="prev1">Previous</button>
+            <button type="submit" id="submit">submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
