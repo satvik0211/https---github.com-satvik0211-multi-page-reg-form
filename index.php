@@ -4,7 +4,7 @@
     $password = "";
     $database = "test1";
 
-    // Create a connection
+    // connection creation
     $conn = new mysqli($servername, $username, $password, $database);
 
     // Check the connection
@@ -12,7 +12,7 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // Retrieve form data
+    // data recieving
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
     $dob = $_POST['dob'];
@@ -43,11 +43,11 @@
     $sscMark = $_FILES['SSCmark']['name'];
     $semMark = $_FILES['semm']['name'];
 
-    // Define file size limits
+    // file size limits
     $maxPhotoSize = 4 * 1024 * 1024; // 4MB
     $maxMarkSize = 10 * 1024 * 1024; // 10MB
 
-    // Check file sizes
+    // file sizes
     $photoSize = $_FILES['photo']['size'];
     $hscMarkSize = $_FILES['HSCmark']['size'];
     $sscMarkSize = $_FILES['SSCmark']['size'];
@@ -66,7 +66,7 @@
     move_uploaded_file($_FILES['SSCmark']['tmp_name'], $targetDir . $sscMark);
     move_uploaded_file($_FILES['semm']['tmp_name'], $targetDir . $semMark);
 
-    // Prepare and execute the SQL query
+    // SQL query
     $stmt = $conn->prepare("insert into registration (
         first_name,
         last_name,
@@ -107,7 +107,7 @@
         echo "Error: " . $stmt->error;
     }
 
-    // Close the prepared statement and the database connection
+    // Close
     $stmt->close();
     $conn->close();
 ?>
