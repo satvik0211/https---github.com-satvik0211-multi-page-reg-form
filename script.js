@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const prevButton = document.querySelector('.prev');
   const prevButton1 = document.querySelector('.prev1');
 
-  // Hide the second and third forms initially
+  //second form hide
   secondForm.style.display = 'none';
   thirdForm.style.display = 'none';
 
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
 
-    // Proceed to the second form if inputs are valid
+    // check if it is filled or not
     if (isValid) {
       firstForm.style.opacity = 0;
       setTimeout(function() {
@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   nextButton1.addEventListener('click', function(e) {
     e.preventDefault();
-    // Validate the second form inputs
     const formInputs = secondForm.querySelectorAll('input[required], select[required]');
     let isValid = true;
     let errorFields = [];
